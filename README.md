@@ -62,3 +62,75 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Test Laravel
+## Php unit
+Es un framework para hacer pruebas de código. Es decir que podemos probar nuestros scripts y detectar errores que se nos hayan pasado por alto.
+
+**Creamos un proyecto nuevo de laravel:**
+> laravel new TestLaravel
+
+**Entramos en el archivo ya creado**
+> cd TestLaravel
+
+**Luego instalamos el composer**
+> composer install
+
+## Utilizando Php unit
+### Test generales
+> php artisan test
+
+**Creamos un nuevo archivo de test**
+> php artisan make:test UserTest
+
+**Se encuentra en esta carpeta **
+> test -> feature -> UserTest
+
+**Volvemos a realizar un nuevo test con el comando php artisan test**
+> php artisan test
+
+**Pero si realizamos un cambio en el archivo UserTest**
+
+**Devolverá un error**
+
+## Ahora crearemos test unitarios
+**1.**
+> php artisan make:test UserTest
+
+#### Vamos a realizar otros ejercicios
+**1)	Ejecutamos este comando para crear una ui
+**
+> composer require laravel/ui
+
+**2)	Creamos una interfaz de autenticación reactiva:**
+> php artisan ui react --auth
+
+**3)	Luego ejecutamos estos comando en el cmd de Windows  ya que en el de visual studio podría generar errores **
+> npm install and npm run dev
+
+**4)	En el cmd los ejecutamos así:**
+> npm install
+> npm run dev
+
+**Creamos una base de datos manualmente en phpmyadmin llamada así:**
+> testlaravel
+
+**No creamos tablas aun**
+
+**Luego nos ubicamos en el archivo .env de laravel y nos aseguramos de que el nombre de la database concuerde con el que creamos anteriormente**
+> DB_DATABASE=testlaravel
+
+**Corremos la migración en la terminal de VSC**
+> php artisan migrate
+
+#### Nos ubicamos en la carpeta unit y luego entramos en el archivo UserTest.php y hacemos las siguientes modificaciones
+
+**1)	Se quita la función que está allí se crea esta nueva:**
+
+**2)	En los use se hace la siguiente modificación:**
+
+**Ejecutamos el test en el terminal**
+> php artisan test
+
+**Volveos a ejecutar el test con php artisan test. Vemos que pasa:**
+>  php artisan test
